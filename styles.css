@@ -25,6 +25,7 @@
 /* *************Main Layout End************ */
 #header{
     width: 100%;
+    min-width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
