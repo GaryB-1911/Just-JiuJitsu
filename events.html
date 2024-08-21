@@ -25,6 +25,25 @@
                 <div class="monthly">
                     <h3>August</h3>
                     <div class="container_1">
+                        <a href="" id="openPopup" class="info_container">
+                            <h4>Suns Of Thunder (Rolling Thunder 7)</h4> <!--Event Name-->
+                            <p>Randburg</p> <!--Event Town-->
+                            <p>JHB</p> <!--Event City-->
+                        </a>
+                        <div class="date_container">
+                            <h4>AUG</h4> <!--Event Month-->
+                            <h4>25th</h4> <!--Event Date-->
+                        </div>
+                    </div>
+                <!-- *********pop up window****** -->
+                    <div id="popup" class="popup">
+                        <div class="popup-content">
+                            <span id="closePopup" class="close">&times;</span>
+                            <img src="Images/Rolling Thunder.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="container_1">
                         <a href="https://smoothcomp.com/en/event/17304" class="info_container">
                             <h4>SUB KINGS 15</h4> <!--Event Name-->
                             <p>Randburg</p> <!--Event Town-->
@@ -80,7 +99,7 @@
                     <h3>October</h3><!--MONTH-->
                     <div class="container_1">
                         <a href="" class="info_container">
-                            <h4>W.T.A 10</h4> <!--Event Name-->
+                            <h4>Winner Takes All 10</h4> <!--Event Name-->
                             <p>Randburg</p> <!--Event Town-->
                             <p>JHB</p> <!--Event City-->
                         </a>
@@ -114,10 +133,31 @@
                 </div>
             </div>
         </div>
+        <h4 style="padding-top: 50px; text-decoration: underline;">Just Jiu-Jitsu is in no way affiliated with any other organization</h4>
     </section>
-    
+   <script>
+            // Get the popup, open button, and close button
+        const popup = document.getElementById("popup");
+        const openPopup = document.getElementById("openPopup");
+        const closePopup = document.getElementById("closePopup");
+
+        // Show the popup when the link is clicked
+        openPopup.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            popup.style.display = "flex"; // Show the popup
+        });
+
+        // Hide the popup when the close button is clicked
+        closePopup.addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+
+        // Hide the popup if the user clicks outside of the popup content
+        window.addEventListener("click", function(event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+   </script> 
 </body>
 </html>
-
-
-
